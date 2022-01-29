@@ -1,0 +1,34 @@
+.home {
+  color: #becae6;
+  text-align: center;
+  margin: 5px;
+  font-size: 3em;
+}
+
+.homePgCard {
+  height: 400px;
+  width: 300px;
+  background-color: #e3e3e3;
+  display: flex;
+  align-items: center;
+}
+
+.homePgCard:hover {
+    box-shadow: 10px 10px 10px grey;
+}
+
+.landscape {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+}
+
+#items {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 50px;
+}
