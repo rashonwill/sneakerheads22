@@ -45,14 +45,13 @@ section:last-of-type {
 }
 
 /* .footer-links {
-    flex-direction: row;
-} */
+      flex-direction: row;
+  } */
 
 /* a {
-    flex-direction: column;
-} */
+      flex-direction: column;
+  } */
 
 section {
   flex-direction: row;
-
 }

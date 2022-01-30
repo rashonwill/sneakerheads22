@@ -1,5 +1,4 @@
 import axios from "axios";
-import { storeCurrentUser } from "../auth";
 
 /*********** USER FUNCTIONS ***********/
 
@@ -18,7 +17,7 @@ export async function createUser(username, email, password) {
     });
     const data = await response.json();
     const token = await data.token;
-    storeCurrentUser(token);
+    // storeCurrentUser(token);
   } catch (error) {
     throw error;
   }
@@ -117,13 +116,12 @@ export async function getCart() {
   }
 }
 
-export async function addToCart({user_id, product_id, quantity}) {
-
+export async function addToCart({ user_id, product_id, quantity }) {
   try {
     const { data } = await axios.post("/api/cart", {
       user_id,
       product_id,
-      quantity
+      quantity,
     });
     return data;
   } catch (error) {
@@ -134,10 +132,7 @@ export async function addToCart({user_id, product_id, quantity}) {
 
 export async function updateProductQty(product_id, quantity) {
   try {
-    const { data } = await axios.patch(
-      `/api/cart/${product_id}`,
-      { quantity },
-    );
+    const { data } = await axios.patch(`/api/cart/${product_id}`, { quantity });
     return data;
   } catch (error) {
     console.error("error updating quantity");

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CartIcon, HeadIcon} from "./icons";
 import "./css/Navigate.css";
-import { useAuth } from '../contexts/AuthContext'
-import { SearchIcon, GearIcon } from './icons'
 import OhShoesLogo from "../img/oh-shoes-logo.png"
 import {
   Dropdown,
@@ -19,30 +16,7 @@ import "./css/Navigate.css";
 
 
 
-const Navigate = ({ loggedIn, setLoggedIn, admin, setAdmin, logout, cart, setCart}) => {
-const{ currentUser } = useAuth()
-const [error, setError] = useState("")
-// const history = useHistory()
-const [showLogout, setShowLogout] = useState(/*!!currentUser*/);
-
-
-
-useEffect(() => {
-  setShowLogout(/*!!currentUser*/)
-}, [currentUser])
-
-
-  const handleLogout = async (e) => {
-    e.preventDefault()
-    setError("")
-console.log("logout")
-    try {
-      await logout()
-      // history.push("/")
-    } catch (error) {
-      setError("Failed to logout!")
-    }
-  }
+const Navigate = () => {
 
   return (
     <>
@@ -61,7 +35,7 @@ console.log("logout")
                   placeholder="Search"
                   className="mr-sm-2"
                 />
-                <Button variant="light">{SearchIcon}</Button>
+                <Button variant="light"></Button>
               </Form>
               <NavDropdown title="Categories" id="basic-nav-dropdown">
                 <Link to="/shoes">
@@ -77,34 +51,9 @@ console.log("logout")
                 </Link>
               </NavDropdown>
             </Nav>
-            <Link to="/admin">
-              <Dropdown.Item as="button">{GearIcon}</Dropdown.Item>
-            </Link>
-            <Link to="/dashboard">
-              <Dropdown.Item as="button">{HeadIcon}</Dropdown.Item>
-            </Link>
-            <Link to="/cart">
-              <Dropdown.Item as="button">{CartIcon}({cart.length})</Dropdown.Item>
-            </Link>
-                { showLogout ? (
-                    <Link to="/">
-                    <Dropdown.Item onClick={handleLogout} as="button">Logout</Dropdown.Item>
-                    </Link>
-                )
-                :
-                (
-                  <>
-                    <Link to="/register">
-                    <Dropdown.Item as="button">Register</Dropdown.Item>
-                  </Link>
-
-                  <Link to="/login">
-                    <Dropdown.Item as="button">Login</Dropdown.Item>
-                  </Link>
-                  </>
-                )}
           </Navbar.Collapse>
         </Navbar>
+  
       </div>
     </>
   );
@@ -112,4 +61,3 @@ console.log("logout")
 
 export default Navigate;
 
-// need to finish button toggle for admin/login/register

@@ -1,12 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap'
-import { GitHubIcon } from './icons'
+// import { GitHubIcon } from './icons'
 import "./css/Footer.css";
 
-const onGitClick = () => {
-  window.open("https://github.com/NicBab/GraceShopper")
-}
-
+   
 const Footer = () => {
     return (
       <>
@@ -18,8 +15,7 @@ const Footer = () => {
             <Container className="d-flex align-items-start justify-content-around mt-10" 
         style={{minHeight: "8vh", marginTop: "10px"}}>
           <>
-            <div className="social-icons" onClick={onGitClick} style={{cursor: 'pointer'}}>
-                { GitHubIcon } 
+            <div className="social-icons" style={{cursor: 'pointer'}}>
             </div>
             </>
           </Container>

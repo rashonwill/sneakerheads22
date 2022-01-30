@@ -40,17 +40,3 @@ const Landing = () => {
 }
 
 export default Landing;
-
-            // <div className="flip-card-container">
-            //     <div className="flip-card">
-            //         <div className="flip-card-front">
-            //             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Albert Einstein">
-            //         </div>
-            //         <div className="flip-card-back">
-            //             <p>
-            //                 "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
-            //                 <span>- Albert Einstein -</span>
-            //             </p>
-            //         </div>
-            //     </div>
-            // </div>
