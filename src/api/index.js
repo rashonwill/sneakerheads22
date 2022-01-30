@@ -44,6 +44,7 @@ export async function getAllUsers() {
 export async function getAllProducts() {
   try {
     const { data } = await axios.get("/api/products");
+    console.log(data);
     return data;
   } catch (error) {
     throw error;

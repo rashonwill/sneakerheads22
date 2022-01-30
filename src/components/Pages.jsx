@@ -5,18 +5,40 @@ import {
   Landing, 
   Header,
   Footer,
-  Navigate,          
+  Navigate, 
+  Product,
+  Cart       
 } from "../components";      
 
-const Pages = () => {
+const Pages = (
+  products,
+  setProducts,
+  cart,
+  setCart,
+  addToCart,
+  onAdd,
+  userCart,
+  setUserCart) => {
   return (
     <>
         <Route exact path="/">
-          <Home />
+          <Home products={products} addToCart={addToCart}/>
         </Route>
         <Route exact path="/landing">
           <Landing />
         </Route>
+
+        {/* <Route exact path="/shoes">
+          <Shoes products={products} />
+        </Route>
+
+        <Route exact path="/hats">
+          <Hats products={products} />
+        </Route>
+
+        <Route exact path="/accessories">
+          <Accessories />
+        </Route> */}
     </>
   );
 };

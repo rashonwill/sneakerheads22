@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./css/Navigate.css";
-import OhShoesLogo from "../img/oh-shoes-logo.png"
+import OhShoesLogo from "../img/oh-shoes-logo.png";
+import { SearchIcon, GearIcon, CartIcon, HeadIcon } from './icons'
 import {
   Dropdown,
   Navbar,
@@ -16,7 +17,7 @@ import "./css/Navigate.css";
 
 
 
-const Navigate = () => {
+const Navigate = ({cart, setCart}) => {
 
   return (
     <>
@@ -35,7 +36,7 @@ const Navigate = () => {
                   placeholder="Search"
                   className="mr-sm-2"
                 />
-                <Button variant="light"></Button>
+                <Button variant="light">{SearchIcon}</Button>
               </Form>
               <NavDropdown title="Categories" id="basic-nav-dropdown">
                 <Link to="/shoes">
@@ -51,6 +52,16 @@ const Navigate = () => {
                 </Link>
               </NavDropdown>
             </Nav>
+
+            <Link to="/admin">
+              <Dropdown.Item as="button">{GearIcon}</Dropdown.Item>
+            </Link>
+            <Link to="/dashboard">
+              <Dropdown.Item as="button">{HeadIcon}</Dropdown.Item>
+            </Link>
+            <Link to="/cart">
+              <Dropdown.Item as="button">{CartIcon}</Dropdown.Item>
+            </Link>
           </Navbar.Collapse>
         </Navbar>
   
