@@ -81,10 +81,10 @@ function App() {
 }
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );
