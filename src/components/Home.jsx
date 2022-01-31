@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
 import "./css/Home.css";
-import { Row } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Product from "./Product";
 import Landing from "./Landing"
 import axios from "axios";
