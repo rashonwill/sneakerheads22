@@ -2,28 +2,33 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Header, Footer, Pages } from "./components";
 import { getAllProducts, getCart  } from "./api";
+import axios from "axios";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    getAllProducts()
-      .then(({products}) => {
-        setProducts(products);
-      })
-      .catch((error) => {
-        console.error(error);
+  useEffect(async () => {
+    axios
+      .get(`https://sneakerhead22.herokuapp.com/api/products`)
+      .then(({ data }) => {
+        if (data.length) {
+          setProducts(data);
+          console.log(data);
+        }
       });
   }, []);  
 
-  useEffect(() => {
-    async function fetchCart() {
-      const userCart = await getCart();
-      setCart(userCart);
-    }
-    fetchCart();
-  }, []);
+  useEffect(async () => {
+    axios
+      .get(`https://sneakerhead22.herokuapp.com/api/cart`)
+      .then(({ data }) => {
+        if (data.length) {
+          setCart(data);
+          console.log(data);
+        }
+      });
+  }, []); 
 
 
   return (
