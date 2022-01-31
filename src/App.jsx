@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Header, Footer, Pages } from "./components";
-import { getAllProducts, getCart  } from "./api";
+// import { getAllProducts, getCart  } from "./api";
 import axios from "axios";
 
 function App() {
