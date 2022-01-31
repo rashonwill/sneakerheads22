@@ -3,6 +3,7 @@ import "./css/Home.css";
 import { Row } from "react-bootstrap";
 import Product from "./Product";
 import Landing from "./Landing"
+import axios from "axios";
 
 import { getAllProducts } from "../api";
 
