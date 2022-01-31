@@ -13,7 +13,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Accessories from "./components/Accessories";
 import Cart from "./components/Cart";
-import Hat from "./components/Hat";
+import Hats from "./components/Hats";
 import Shoes from "./components/Shoes";
 
 
