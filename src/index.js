@@ -23,27 +23,6 @@ function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  useEffect(async () => {
-    axios
-      .get(`https://sneakerhead22.herokuapp.com/api/products`)
-      .then(({ data }) => {
-        if (data.length) {
-          setProducts(data);
-          console.log(data);
-        }
-      });
-  }, []);  
-
-//   useEffect(async () => {
-//     axios
-//       .get(`https://sneakerhead22.herokuapp.com/api/cart`)
-//       .then(({ data }) => {
-//         if (data.length) {
-//           setCart(data);
-//           console.log(data);
-//         }
-//       });
-//   }, []); 
 
 
   return (
