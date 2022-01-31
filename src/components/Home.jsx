@@ -50,9 +50,10 @@ const Home = () => {
     
       <div className="item-container">
 
-       {products && products.length > 0
+          {products && products.length > 0
         ? products.map((product) => {
-           <Row id="items">
+            return (
+   <Row id="items">
             <Col>
               <Card
                 className="homePgCard ml-4 mb-4"
@@ -90,10 +91,9 @@ const Home = () => {
               </Card>
             </Col>
           </Row>
-  
-  })
-  
-}
+            );
+          })
+        : null}
   
       </div>
     </>
