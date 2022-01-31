@@ -22,6 +22,10 @@ server.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
+const cors = require("cors");
+server.use(cors());
+server.use(cors({ origin: "*" }));
+
 // bring in the DB connection
 const { client } = require("./db");
 
