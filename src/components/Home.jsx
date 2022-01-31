@@ -9,15 +9,16 @@ import { getAllProducts } from "../api";
 const Home = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    getAllProducts()
-      .then(({products}) => {
-        setProducts(products);
-      })
-      .catch((error) => {
-        console.error(error);
+  useEffect(async () => {
+    axios
+      .get(`${https://sneakerhead22.herokuapp.com/api/products`)
+      .then(({ data }) => {
+        if (data.length) {
+          setProducts(data);
+          console.log(data);
+        }
       });
-  }, []);  
+  }, []);
 
 
 
