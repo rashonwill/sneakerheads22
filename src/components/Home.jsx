@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(async () => {
     axios
-      .get(`${https://sneakerhead22.herokuapp.com/api/products`)
+      .get(`https://sneakerhead22.herokuapp.com/api/products`)
       .then(({ data }) => {
         if (data.length) {
           setProducts(data);
