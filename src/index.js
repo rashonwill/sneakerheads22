@@ -37,6 +37,7 @@ function App() {
 <body>
        <Switch>
               <Route exact path="/">
+                <Landing />
               <Home />
             </Route>
            <Route exact path="/shoes">
