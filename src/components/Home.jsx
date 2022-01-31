@@ -4,11 +4,13 @@ import { Row } from "react-bootstrap";
 import Product from "./Product";
 import Landing from "./Landing"
 import axios from "axios";
+import { InfoIcon } from "./icons";
 
 import { getAllProducts } from "../api";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [showProductInfo, setShowProductInfo] = useState(false);
 
   useEffect(async () => {
     axios
@@ -20,6 +22,19 @@ const Home = () => {
         }
       });
   }, []);
+  
+      const handleAddToCart = async () => {
+      try {
+        alert(`${product.name} added to cart!`)
+        const user_id = 3;
+        await addToCart(user_id, product.id, 1)
+        product.quantity = 1;
+        cart.push(product)
+      } catch (error) {
+        console.error("Error with AddToCart handler")
+      }
+    }
+  
 
 
 
@@ -36,7 +51,46 @@ const Home = () => {
       <Row id="items">
       {products.map((product, idx) => {
             return (
-              <Product key={idx} product={product} addToCart={addToCart} />
+
+          <Row>
+            <Col>
+              <Card
+                className="homePgCard ml-4 mb-4"
+                bg="light"
+                key={product.id}
+                style={{ width: "18rem" }}
+              >
+                <Link to="/product/id">
+                  <Card.Img
+                    className="landscape"
+                    variant="top"
+                    style={{ maxHeight: "200px" }}
+                    src={products.img_url}
+                  />
+                </Link>
+                <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  {showProductInfo && (
+                    <Card.Text>{product.description}</Card.Text>
+                  )}
+                  <h6 className="card-subtitle text-muted">${product.price}</h6>
+                  <br></br>
+                  <Button onClick={handleAddToCart} variant="primary">
+                    Add to cart
+                  </Button>
+                  <Button
+                    onClick={() => setShowProductInfo(!showProductInfo)}
+                    style={{ marginLeft: "5em" }}
+                    variant="light"
+                  >
+                    {" "}
+                    {InfoIcon}{" "}
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+
               );
             }).reverse()}
   
