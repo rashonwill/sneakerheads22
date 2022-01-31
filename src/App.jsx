@@ -19,16 +19,16 @@ function App() {
       });
   }, []);  
 
-  useEffect(async () => {
-    axios
-      .get(`https://sneakerhead22.herokuapp.com/api/cart`)
-      .then(({ data }) => {
-        if (data.length) {
-          setCart(data);
-          console.log(data);
-        }
-      });
-  }, []); 
+//   useEffect(async () => {
+//     axios
+//       .get(`https://sneakerhead22.herokuapp.com/api/cart`)
+//       .then(({ data }) => {
+//         if (data.length) {
+//           setCart(data);
+//           console.log(data);
+//         }
+//       });
+//   }, []); 
 
 
   return (
