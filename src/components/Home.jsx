@@ -13,16 +13,16 @@ const Home = () => {
   const [products, setProducts] = useState();
   const [showProductInfo, setShowProductInfo] = useState(false);
 
-  useEffect(async () => {
-    axios
-      .get(`https://sneakerhead22.herokuapp.com/api/products`)
-      .then(({ data }) => {
-        if (data.length) {
-          setProducts(data);
-          console.log(data);
-        }
+  useEffect(() => {
+    getAllProducts()
+      .then(({products}) => {
+        setProducts(products);
+      })
+      .catch((error) => {
+        console.error(error);
       });
-  }, []);
+  }, []);  
+
   
       const handleAddToCart = async () => {
       try {
