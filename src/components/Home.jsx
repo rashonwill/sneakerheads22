@@ -1,4 +1,5 @@
-import React, {useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import "./css/Home.css";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -8,14 +9,8 @@ import axios from "axios";
 import { InfoIcon } from "./icons";
 import { getAllProducts, addToCart } from "../api";
 
-const Home = ({
-    product,
-    products,
-    setProducts,
-    cart,
-    setCart,
-  }) => {
-  const [products, setProducts] = useState([]);
+const Home = () => {
+  const [products, setProducts] = useState();
   const [showProductInfo, setShowProductInfo] = useState(false);
 
   useEffect(async () => {
