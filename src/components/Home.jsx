@@ -47,12 +47,12 @@ const Home = () => {
       </div>
       <div className="home">HOME</div>
       <hr/>
-      <div className="item-container">
     
-      <Row id="items">
+      <div className="item-container">
+
        {products && products.length > 0
         ? products.map((product) => {
-           <Row>
+           <Row id="items">
             <Col>
               <Card
                 className="homePgCard ml-4 mb-4"
@@ -93,7 +93,8 @@ const Home = () => {
   
   })
   
-      </Row>
+}
+  
       </div>
     </>
   );
