@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import axios from "axios";
 
 
 import Navigate from "./components/Navigate";
@@ -57,6 +58,7 @@ function App() {
 <body>
        <Switch>
               <Route exact path="/home">
+               <Landing />
               <Home />
             </Route>
            <Route exact path="/shoes">
