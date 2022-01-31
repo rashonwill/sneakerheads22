@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./css/Navigate.css";
-import OhShoesLogo from "../img/oh-shoes-logo.png";
+import OhShoesLogo from "../img/sneakerheads.jpg";
 import { SearchIcon, GearIcon, CartIcon, HeadIcon } from './icons'
 import {
   Dropdown,
