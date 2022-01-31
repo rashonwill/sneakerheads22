@@ -6,10 +6,15 @@ import Product from "./Product";
 import Landing from "./Landing"
 import axios from "axios";
 import { InfoIcon } from "./icons";
+import { getAllProducts, addToCart } from "../api";
 
-import { getAllProducts } from "../api";
-
-const Home = () => {
+const Home = ({
+    product,
+    products,
+    setProducts,
+    cart,
+    setCart,
+  }) => {
   const [products, setProducts] = useState([]);
   const [showProductInfo, setShowProductInfo] = useState(false);
 
