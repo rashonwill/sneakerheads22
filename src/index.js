@@ -49,6 +49,10 @@ function App() {
            <Route exact path="/accessories">
               <Accessories />
             </Route>
+
+           <Route exact path="/cart">
+              <Cart />
+            </Route>
 </Switch>
 </body>
 
