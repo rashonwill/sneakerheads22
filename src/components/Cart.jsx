@@ -24,13 +24,7 @@ const Cart = ({ cart }) => {
               <th> </th>
             </tr>
           </thead>
-//           <tbody>
-//             {cart.map((cartItem, idx) => {
-//               total += cartItem.price * cartItem.quantity;
-//               return <CartItem key={idx} cart={cart} cartItem={cartItem} />
-//             }
-//             )}
-//           </tbody>
+         <tbody></tbody>
         </Table>
 
         <div className="subtotal">
