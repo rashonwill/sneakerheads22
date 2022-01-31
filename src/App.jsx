@@ -41,14 +41,14 @@ function App() {
     />
   </header>
 
-  <main>
+  <body>
 <Pages 
 cart={cart}
 setCart={setCart}
 products={products}
 setProducts={setProducts}
 />
-  </main>
+  </body>
 
   <footer>
 <Footer />
