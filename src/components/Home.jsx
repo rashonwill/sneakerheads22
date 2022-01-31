@@ -52,7 +52,7 @@ const Home = () => {
       <Row id="items">
        {products && products.length > 0
         ? products.map((product) => {
-         <Row>
+           <Row>
             <Col>
               <Card
                 className="homePgCard ml-4 mb-4"
@@ -91,10 +91,7 @@ const Home = () => {
             </Col>
           </Row>
   
-  
-  })
-  
-}
+  })}
   
       </Row>
       </div>
