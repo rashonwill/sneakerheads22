@@ -48,11 +48,11 @@ const Home = () => {
       <div className="home">HOME</div>
       <hr/>
       <div className="item-container">
+    
       <Row id="items">
-      {products.map((product, idx) => {
-            return (
-
-          <Row>
+       {products && products.length > 0
+        ? products.map((product) => {
+         <Row>
             <Col>
               <Card
                 className="homePgCard ml-4 mb-4"
@@ -65,7 +65,7 @@ const Home = () => {
                     className="landscape"
                     variant="top"
                     style={{ maxHeight: "200px" }}
-                    src={products.img_url}
+                    src={product.img_url}
                   />
                 </Link>
                 <Card.Body>
@@ -90,9 +90,11 @@ const Home = () => {
               </Card>
             </Col>
           </Row>
-
-              );
-            }).reverse()}
+  
+  
+  })
+  
+}
   
       </Row>
       </div>
