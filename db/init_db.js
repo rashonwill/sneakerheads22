@@ -313,6 +313,16 @@ async function createInitialProducts() {
         inventory: 50,
         category: "shoes",
       },
+      
+            {
+        img_url:
+          "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80",
+        name: "Air Force 1",
+        description: "Brown/White/Tan",
+        price: 95.00,
+        inventory: 20,
+        category: "shoes",
+      },
     ];
     const products = await Promise.all(productsToCreate.map(createProduct));
     console.log("Products created:");
