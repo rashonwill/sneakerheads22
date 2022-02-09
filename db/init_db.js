@@ -323,6 +323,16 @@ async function createInitialProducts() {
         inventory: 20,
         category: "shoes",
       },
+      
+                  {
+        img_url:
+          "https://images.unsplash.com/photo-1512865559399-304a641fe752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
+        name: "Chicago Bull",
+        description: "White Chicago Bulls Hat",
+        price: 75.00,
+        inventory: 20,
+        category: "hats",
+      },
     ];
     const products = await Promise.all(productsToCreate.map(createProduct));
     console.log("Products created:");
