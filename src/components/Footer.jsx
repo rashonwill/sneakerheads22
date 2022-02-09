@@ -12,13 +12,6 @@ const Footer = () => {
               <>
             <div>
             <footer className="site-footer">
-            <Container className="d-flex align-items-start justify-content-around mt-10" 
-        style={{minHeight: "8vh", marginTop: "10px"}}>
-          <>
-            <div className="social-icons" style={{cursor: 'pointer'}}>
-            </div>
-            </>
-          </Container>
               <section className="footer-links">
                 <h2>Customer Care</h2>
                 <a href="https://www.google.com/">Account</a>
