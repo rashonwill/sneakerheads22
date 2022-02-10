@@ -39,7 +39,7 @@ const Login = () => {
                                 <Form.Control type="email" ref={emailRef} required />
                             </Form.Group>
                             <Form.Group id="password">
-                                <Form.Label>password</Form.Label>
+                                <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" ref={passwordRef} required />
                             </Form.Group>
                             <Button 
