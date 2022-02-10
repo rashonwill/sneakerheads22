@@ -17,7 +17,7 @@ const Login = () => {
             setError("")
             setLoading(true)
 
-            history.push("/dashboard")
+            history.push("/")
         } catch (error) {
           console.error("Failed to sign in!")
         }
