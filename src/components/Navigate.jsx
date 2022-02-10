@@ -53,7 +53,7 @@ const Navigate = ({cart, setCart}) => {
               </NavDropdown>
             </Nav>
 
-            <Link to="/dashboard">
+            <Link to="/login">
               <Dropdown.Item as="button">{HeadIcon}</Dropdown.Item>
             </Link>
             <Link to="/cart">
