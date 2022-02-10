@@ -1,12 +1,11 @@
 import React, { useState, useRef, } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Container, Card, Form, Button, Alert } from 'react-bootstrap'
-import { useAuth } from '../contexts/AuthContext'
+
 
 const Login = () => {
     const [loading, setLoading] = useState()
     const [error, setError] = useState()
-    const { login } = useAuth()
     const emailRef = useRef()
     const passwordRef = useRef()
     const history = useHistory()
@@ -17,7 +16,7 @@ const Login = () => {
         try {
             setError("")
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
+
             history.push("/dashboard")
         } catch (error) {
           console.error("Failed to sign in!")
