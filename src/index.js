@@ -17,6 +17,7 @@ import Cart from "./components/Cart";
 import Hats from "./components/Hats";
 import Shoes from "./components/Shoes";
 import Login from "./components/Login";
+import Register from "./components/Register";
 
 
 
