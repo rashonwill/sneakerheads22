@@ -53,9 +53,9 @@ const Navigate = ({cart, setCart}) => {
               </NavDropdown>
             </Nav>
 
-            <Link to="/admin">
-              <Dropdown.Item as="button">{GearIcon}</Dropdown.Item>
-            </Link>
+//             <Link to="/admin">
+//               <Dropdown.Item as="button">{GearIcon}</Dropdown.Item>
+//             </Link>
             <Link to="/dashboard">
               <Dropdown.Item as="button">{HeadIcon}</Dropdown.Item>
             </Link>
