@@ -48,11 +48,11 @@ const Register = () => {
                         <Form.Control type="email" ref={emailRef} required />
                       </Form.Group>
                       <Form.Group id="password">
-                        <Form.Label>password</Form.Label>
+                        <Form.Label>Password</Form.Label>
                         <Form.Control type="password" ref={passwordRef} required />
                       </Form.Group>
                       <Form.Group id="password-confirm">
-                        <Form.Label>password confirmation</Form.Label>
+                        <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control type="password" ref={passwordConfirmRef} required />
                       </Form.Group>
                       <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
