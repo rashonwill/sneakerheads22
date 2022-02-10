@@ -16,6 +16,7 @@ import Accessories from "./components/Accessories";
 import Cart from "./components/Cart";
 import Hats from "./components/Hats";
 import Shoes from "./components/Shoes";
+import Login from "./components/Login";
 
 
 
@@ -48,6 +49,10 @@ function App() {
 
            <Route exact path="/accessories">
               <Accessories />
+            </Route>
+
+           <Route exact path="/login">
+              <Login />
             </Route>
 
            <Route exact path="/cart">
