@@ -25,9 +25,6 @@ const Pages = (
         <Route exact path="/">
           <Home products={products} addToCart={addToCart}/>
         </Route>
-//         <Route exact path="/landing">
-//           <Landing />
-//         </Route>
 
         <Route exact path="/login">
           <Login />
