@@ -16,7 +16,6 @@ const Login = () => {
         try {
             setError("")
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
             history.push("/dashboard")
         } catch (error) {
           console.error("Failed to sign in!")
