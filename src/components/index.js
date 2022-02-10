@@ -8,6 +8,7 @@ export { default as Header } from "./Header";
 export { default as Product } from "./Product";
 export { default as Cart } from "./Cart";
 export { default as Login } from "./Login";
+export { default as Register } from "./Register";
 
 export { default as Shoes } from "./Shoes";
 export { default as Hats } from "./Hats";
