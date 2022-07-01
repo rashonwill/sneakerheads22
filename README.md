@@ -1,3 +1,3 @@
 # ohshoes
 
-https://sneakerheads22.netlify.app/
+https://sneakerhead22.herokuapp.com/
