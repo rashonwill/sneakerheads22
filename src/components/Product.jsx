@@ -54,9 +54,7 @@ const Product = ({
                   )}
                   <h6 className="card-subtitle text-muted">${product.price}</h6>
                   <br></br>
-                  <Button onClick={handleAddToCart} variant="primary">
-                    Add to cart
-                  </Button>
+        
                   <Button
                     onClick={() => setShowProductInfo(!showProductInfo)}
                     style={{ marginLeft: "5em" }}
@@ -74,5 +72,11 @@ const Product = ({
       </>
     );
   };
+
+//Line 57 ADD TO CART
+
+// <Button onClick={handleAddToCart} variant="primary">
+//                     Add to cart
+//                   </Button>
   
   export default Product;
