@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "19.1.0"
+  },
   "scripts": {
     "client:dev": "react-scripts start",
     "build": "react-scripts build",
